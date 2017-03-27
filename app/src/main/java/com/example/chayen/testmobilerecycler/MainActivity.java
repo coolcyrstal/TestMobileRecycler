@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
     String[] text_array = {
-            "logotwiiter",
+            "twitter",
             "mobile",
             "t icon"
     };
@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(int position, View v) {
                 Intent intent = new Intent(MainActivity.this, ExamActivity.class);
                 startActivity(intent);
+                ExamActivity.imageID = recycler_list.get(position).getImageview();
 //                Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
             }
         });
